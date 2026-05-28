@@ -219,6 +219,7 @@ router.post("/", async (req, res) => {
         createdConverted: unixToDate(subInfo.created || bill_date.toString()),
 
         orderLineRef: `${subId || "one-time"}-${priceId || "unknown"}`,
+        isChangedOrder: false,
       };
     });
 

@@ -174,6 +174,7 @@ router.post("/", (req, res) => {
         reportingExRate: 1.0,
         carvesEligible: "No",
         glCode: isDeletion ? "2999" : "1000",
+        isChangedOrder: false,
       };
     });
 

@@ -183,6 +183,7 @@ function transformDeltasToOrderFormat(payload, changes) {
       pricingDiscountAmount: 0,
       startDate: dateStr,
       totalListPrice: Number(signedTotal.toFixed(2)), // signed
+      isChangedOrder: true,
     };
   });
 }
