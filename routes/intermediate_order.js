@@ -76,11 +76,12 @@ router.post("/", (req, res) => {
       ![
         "customer.subscription.created",
         "customer.subscription.deleted",
+        "one_time",
       ].includes(type)
     ) {
       return res.status(400).json({
         error:
-          "type is required and must be 'customer.subscription.created' or 'customer.subscription.deleted'",
+          "type is required and must be 'customer.subscription.created', 'customer.subscription.deleted', or 'one_time'",
       });
     }
 
