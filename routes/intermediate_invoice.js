@@ -32,7 +32,7 @@ function hashTo8Digits(value) {
 
   const largeNum = BigInt("0x" + sha1Hex);
 
-  return (largeNum % BigInt(100_000_000)).toString().padStart(8, "0"); // always exactly 8 digits
+  return (largeNum % BigInt(100_000_000)).toString();
 }
 
 function getPartyRoleId(customerId) {
