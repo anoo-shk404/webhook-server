@@ -147,7 +147,7 @@ router.post("/", (req, res) => {
         purchaseOrderLineRef,
         actionType: isDeletion ? "Cancel" : "New",
         subscriptionNumber: SubscriptionId,
-        orderNumber: SubscriptionId,
+        orderNumber: isDeletion ? `${SubscriptionId}-${eventHash}` : SubscriptionId,
         purchaseOrderNumber: SubscriptionId,
         serviceInstanceId: 1,
         pricePlanEventId, // still included as separate field
